@@ -29,12 +29,15 @@ No campo indicado e clique em "Gerar Tabuada"
 Altere o tema
 Clique no botão 🌙/☀️ no canto superior direito
 
+---
+
 🛠️ Tecnologias Utilizadas
-HTML5 Estrutura semântica
 
-CSS3 Estilização avançada
+- HTML5 Estrutura semântica
+- CSS3 Estilização avançada
+- JavaScript Lógica interativa
 
-JavaScript Lógica interativa
+---
 
 🔧 Instalação
 bash
@@ -52,12 +55,17 @@ css
   --secondary-color: #outra-cor;
   /* ... */
 }
+
+---
+
 🤝 Contribuição
 Reporte problemas
 📌 Abra uma issue
 
 Faça melhorias
 🛠️ Crie um fork e envie um PR
+
+---
 
 📄 Licença
 MIT License - Veja o arquivo LICENSE para detalhes
