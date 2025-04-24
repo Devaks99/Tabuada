@@ -2,8 +2,9 @@
 
 **Gerador de tabuada online com tema escuro/claro e design responsivo**
 
-![tela mobile1 tabuada](https://github.com/user-attachments/assets/4dd4a4e3-61fa-4223-a28a-c7e67566f3f4)
-![tela mobile2 tabuada](https://github.com/user-attachments/assets/6f19ba8a-08ae-453b-aeac-11bb1af33ad0)
+![tela mobile1 tabuada](https://github.com/user-attachments/assets/53a99250-5928-4969-89ad-1714a2c62720)
+![tela mobile2 tabuada](https://github.com/user-attachments/assets/973074df-b108-4772-87cc-6689f5e1c47b)
+
 
 
 ## ✨ Funcionalidades
