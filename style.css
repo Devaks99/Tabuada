@@ -1,0 +1,204 @@
+/* Variáveis de cores para facilitar personalização */
+:root {
+    --primary-color: #082d5e;
+    --secondary-color: #0a668a;
+    --background-gradient: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    --text-dark: #2c3e50;
+    --text-light: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --bg-color: #ffffff;
+    --text-color: var(--text-dark);
+    --border-color: var(--primary-color);
+    --select-bg: #ffffff;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #4a90e2;
+    --secondary-color: #6b48e8;
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --background-gradient: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    --border-color: #4a90e2;
+    --select-bg: #2d2d2d;
+  }
+
+  /*configurações globais */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-image: var(--background-gradient);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: var(--shadow);
+    padding: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.1) 75%,
+      transparent 75%);
+    background-size: 4px 4px;
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  h1:hover {
+    transform: scale(1.02);
+  }
+  
+  section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  .tabuada-container {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .input-group {
+    margin: 1.5rem 0;
+  }
+  
+  #txtn {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  input[type="button"] {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  input[type="button"]:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+  
+  #seltab {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background: white;
+    min-height: 200px;
+  }
+  
+  #seltab option {
+    padding: 5px;
+    margin: 2px 0;
+}
+
+#themeToggle {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: transform 0.3s ease;
+}
+
+#themeToggle:hover {
+  transform: rotate(20deg);
+}
+
+#txtn, #seltab {
+  background: var(--select-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+footer {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-light);
+  padding: 1rem;
+  margin-top: auto;
+  box-shadow: var(--shadow);
+}
+
+  /* Ajustes de responsividade */
+  @media (max-width: 768px) {
+    .tabuada-container {
+      padding: 1.5rem;
+      width: 95%;
+    }
+  
+    section {
+      padding: 1rem;
+    }
+  
+    #seltab {
+      min-height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #txtn {
+      font-size: 1rem;
+    }
+    
+    input[type="button"] {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
